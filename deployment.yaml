@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
@@ -18,7 +18,7 @@ spec:
         run: demo-api
     spec:
       containers:
-      - image: lukebond/demo-api-redis:latest
+      - image: jakobkrein/demo-api:latest
         imagePullPolicy: Always
         name: demo-api-redis
         ports:
